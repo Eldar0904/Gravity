@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" data-theme="day">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f6f3e9">
+  <meta name="description" content="Gravity, your personal Quran and daily reading journal.">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>Gravity — Quran & Daily Reading</title>
+  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="icon" href="icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="top">
+    <div class="shell top-inner">
+      <a class="brand" href="#today"><img src="icon.png" alt="" width="38" height="38"><span><strong>Gravity</strong><small>Quran &amp; daily reading</small></span></a>
+      <nav class="navigation" aria-label="Main navigation"></nav>
+      <button type="button" id="appearance" class="appearance" aria-label="Appearance settings"></button>
+    </div>
+  </header>
+  <main id="view" class="shell" tabindex="-1"></main>
+  <p class="sr-only" id="announcement" role="status"></p>
+  <div class="toast" id="toast" hidden><span id="toast-message"></span><button type="button" id="undo">Undo</button></div>
+  <dialog id="settings">
+    <form method="dialog">
+      <div class="dialog-head"><h2>Appearance</h2><button class="close" aria-label="Close">×</button></div>
+    </form>
+    <fieldset>
+      <legend class="sr-only">Theme</legend>
+      <label><input type="radio" name="theme" value="auto"> Automatic <small>Sunrise and sunset</small></label>
+      <label><input type="radio" name="theme" value="day"> Reading Journal <small>Light</small></label>
+      <label><input type="radio" name="theme" value="night"> Quiet Light <small>Dark</small></label>
+    </fieldset>
+    <p class="detail" id="location-status"></p>
+    <button type="button" class="action" id="locate">Use my location</button>
+  </dialog>
+  <dialog id="listening">
+    <form method="dialog">
+      <div class="dialog-head"><h2>Log Vaazlar</h2><button class="close" aria-label="Close" value="cancel" formnovalidate>×</button></div>
+      <label class="field">Title <span>(optional)</span><input name="title" maxlength="100" placeholder="What did you listen to?"></label>
+      <label class="field">Format<select name="format"><option>Sermon</option><option>Audio</option><option>Video</option></select></label>
+      <button class="action" value="save">Save listening</button>
+    </form>
+  </dialog>
+</body>
+</html>
