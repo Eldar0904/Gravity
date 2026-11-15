@@ -11,7 +11,15 @@ const icons = {
   pirlanti: '<path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v15H6.5a2.5 2.5 0 0 0 0 5H20v-5M4 5.5v15M8 8h8m-8 4h6"/>',
   vaazlar: '<path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="3" y="12" width="5" height="9" rx="2"/><rect x="16" y="12" width="5" height="9" rx="2"/>'
 };
-icons.cevsen = '<path d="M12 2c3 2.5 5.7 3.6 9.2 4.2v5.1c0 5.6-3.6 9.1-9.2 11.7-5.6-2.6-9.2-6.1-9.2-11.7V6.2C6.3 5.6 9 4.5 12 2z" fill="#244c38" stroke="#cba761"/><path d="M12 18V9m0 4c-3.3 0-4.5-2.2-4.5-3.1 2.1.1 3.9.8 4.5 3.1zm0 2.5c3.1 0 4.8-2 4.8-3.2-2.6.2-4.1.8-4.8 3.2zm0-3.5c-1.6-1.7-1.6-3.4 0-5 1.6 1.6 1.6 3.3 0 5z" stroke="#e7c47d"/>';
+icons.cevsen = [
+  '<path d="M12 1.9C14.4 4.1 17.3 5.5 21.1 6.2v5c0 5.2-3.2 9-9.1 11.8-5.9-2.8-9.1-6.6-9.1-11.8v-5c3.8-.7 6.7-2.1 9.1-4.3z" fill="#244c38" stroke="#d4b373" stroke-width="1.2"/>',
+  '<path d="M12 4.1c2.2 1.6 4.6 2.8 7.3 3.4v3.7c0 4.2-2.6 7.6-7.3 10-4.7-2.4-7.3-5.8-7.3-10V7.5c2.7-.6 5.1-1.8 7.3-3.4z" stroke="#a88951" stroke-width=".46"/>',
+  '<path d="M11.8 19.2c.48-2.55.54-4.88.2-7.5" stroke="#e9c780" stroke-width=".7"/>',
+  '<path d="M12 16.8c-2.35.05-4.1-1.26-4.98-3.38 2.1.21 3.96 1.35 4.98 3.38z" fill="#d7ae62" stroke="none"/>',
+  '<path d="M12.15 18.35c.73-1.97 2.45-3.49 4.86-4.03-.67 2.17-2.57 3.59-4.86 4.03z" fill="#eac980" stroke="none"/>',
+  '<path d="M12 12.65C9.48 12.21 8.3 10.67 8.45 8.11c.99.59 1.73 1.25 2.12 1.92.2-1.39.71-2.48 1.43-3.31.72.83 1.23 1.92 1.43 3.31.39-.67 1.13-1.33 2.12-1.92.15 2.56-1.03 4.1-3.55 4.54z" fill="#eecb82" stroke="none"/>',
+  '<path d="M12 12.55c-.91-.56-1.57-1.41-1.43-2.52m1.43 2.52c.91-.56 1.57-1.41 1.43-2.52" stroke="#a77539" stroke-width=".43"/>'
+].join('');
 const icon = name => `<svg class="glyph" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${icons[name]}</svg>`;
 
 const readings = [
